@@ -1,0 +1,13 @@
+@include tablet {
+  .btn-base {
+    font-size: 14px;
+    width: 142px;
+    height: 46px;
+    &_size {
+      &_sm {
+        width: 109px;
+        height: 44px;
+      }
+    }
+  }
+}
