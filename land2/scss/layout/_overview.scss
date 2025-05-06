@@ -1,0 +1,78 @@
+.overview {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .text-box {
+    max-width: 442px;
+    color: $dark;
+
+    .title {
+      margin-bottom: 56px;
+      font-family: $poppins;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 14.4px;
+      letter-spacing: 3.2px;
+      text-transform: uppercase;
+    }
+  }
+
+  .point {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    .box {
+      margin-bottom: 16px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    &__title {
+      font-family: $sora;
+      font-size: 23px;
+      font-weight: 700;
+      line-height: normal;
+    }
+    &__caption {
+      font-family: $poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28.8px;
+      color: $gray2;
+    }
+  }
+
+  .img-box {
+    max-width: 657px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@include tablet {
+  .overview {
+    .text-box {
+      max-width: 366px;
+    }
+    .img-box {
+      max-width: 369px;
+    }
+  }
+}
+
+@include phone {
+  .overview {
+    .wrapper {
+      flex-direction: column;
+      gap: 40px;
+    }
+    .text-box,
+    .img-box {
+      max-width: 100%;
+    }
+  }
+}

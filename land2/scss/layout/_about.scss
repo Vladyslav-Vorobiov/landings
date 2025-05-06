@@ -1,0 +1,73 @@
+.about {
+  .title-md {
+    display: none;
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 54px;
+  }
+
+  .title,
+  .title-md {
+    margin-bottom: 24px;
+    max-width: 270px;
+    font-family: $sora;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  &__img {
+    max-width: 551px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .caption {
+    max-width: 354px;
+    font-family: $poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+    color: $gray2;
+    span {
+      color: #d63637;
+    }
+  }
+}
+
+@include tablet {
+  .about {
+    .title-md {
+      display: block;
+      margin: 0 auto 50px;
+    }
+    .title {
+      display: none;
+    }
+    .wrapper {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    &__img {
+      margin: 0 auto;
+    }
+    .caption {
+      max-width: 100%;
+    }
+  }
+}
+
+@include phone {
+  .about {
+    .title-md {
+      font-size: 36px;
+    }
+    &__img {
+      max-width: 260px;
+    }
+  }
+}

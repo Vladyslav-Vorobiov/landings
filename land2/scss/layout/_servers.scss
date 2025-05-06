@@ -1,0 +1,101 @@
+.servers {
+  padding: 64px 0 56px;
+  background-color: $dark-blue;
+  color: $white;
+  .container {
+    max-width: 1348px;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .provide-box,
+  .featured-box {
+    padding: 48px 24px;
+    border: 1px solid var(--colors-blue-200, #2f2f48);
+    border-radius: 16px;
+    background: linear-gradient(180deg, #171717 0%, rgba(27, 27, 40, 0) 100%);
+  }
+
+  .provide-box {
+    max-width: 891px;
+  }
+
+  .featured-box {
+    max-width: 437px;
+    img {
+      max-width: 340px;
+    }
+  }
+
+  .title {
+    margin-bottom: 24px;
+    font-family: $poppins;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 42px;
+  }
+  .subtitle {
+    margin-bottom: 56px;
+    font-family: $sora;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.8px;
+    color: #d0d0d0;
+  }
+
+  .country {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 46px 24px;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      width: 96px;
+    }
+    &-flag {
+      width: 20px;
+    }
+    &-name {
+      font-size: 14px;
+      color: $gray;
+    }
+    &-name.highlight {
+      color: $white;
+    }
+  }
+}
+
+@include tablet {
+  .servers {
+    .wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+  }
+}
+
+@include phone {
+  .servers {
+    .title {
+      font-size: 32px;
+    }
+    .provide-box {
+      margin-bottom: 24px;
+    }
+    .country-item.ru {
+      display: none;
+    }
+    .featured-box {
+      img {
+        max-width: 295px;
+      }
+    }
+  }
+}

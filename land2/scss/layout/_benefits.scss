@@ -1,0 +1,119 @@
+.benefits {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 112px;
+  }
+  &__text {
+    max-width: 455px;
+    .note {
+      margin-bottom: 32px;
+      font-family: $poppins;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 14.4px;
+      letter-spacing: 3.2px;
+      text-transform: uppercase;
+      color: $dark;
+    }
+    .title {
+      margin-bottom: 32px;
+      font-family: $sora;
+      font-size: 35px;
+      font-weight: 800;
+      line-height: 45.5px;
+      color: $dark;
+    }
+    .caption {
+      font-family: $poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28.8px;
+      color: $gray2;
+    }
+  }
+
+  .accordion {
+    margin: 0 auto;
+
+    &__item {
+      padding: 16px;
+      border-bottom: 1px solid #d0d0d0;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &__item.active {
+      & > .accordion__content {
+        padding-top: 18px;
+        max-height: 170px;
+      }
+      & > .accordion__label:after {
+        transition: all 0.3s;
+        transform: rotate(-90deg);
+        fill: green;
+      }
+    }
+
+    &__label {
+      font-family: $poppins;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 20px;
+      color: $dark;
+      position: relative;
+      cursor: pointer;
+      &:after {
+        display: block;
+        content: "";
+        background-image: url("/img/chevron-right.svg");
+        background-size: 16px 16px;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        translate: (0% -50%);
+        right: 0;
+        transition: all 0.3s;
+      }
+    }
+    &__content {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s;
+      font-family: $poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28.8px;
+      color: $gray2;
+    }
+  }
+}
+
+@include tablet {
+  .benefits {
+    .wrapper {
+      gap: 16px;
+    }
+    &__text {
+      max-width: 369px;
+    }
+  }
+}
+
+@include phone {
+  .benefits {
+    .wrapper {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    &__text {
+      .title {
+        font-size: 32px;
+      }
+    }
+  }
+}
